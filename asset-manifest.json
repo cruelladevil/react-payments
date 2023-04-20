@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-payments/static/css/main.5a134368.css",
-    "main.js": "/react-payments/static/js/main.7344f10a.js",
+    "main.js": "/react-payments/static/js/main.4b7237f3.js",
     "static/media/question.svg": "/react-payments/static/media/question.7e7d319183b2409a13e4a2f1e5a1171d.svg",
     "index.html": "/react-payments/index.html",
     "static/media/previous.svg": "/react-payments/static/media/previous.150dd18b2998e33b66064205bc4b5606.svg",
     "static/media/white-dot.svg": "/react-payments/static/media/white-dot.a8abc29e4a2a7f833baccb72998fb08e.svg",
     "main.5a134368.css.map": "/react-payments/static/css/main.5a134368.css.map",
-    "main.7344f10a.js.map": "/react-payments/static/js/main.7344f10a.js.map"
+    "main.4b7237f3.js.map": "/react-payments/static/js/main.4b7237f3.js.map"
   },
   "entrypoints": [
     "static/css/main.5a134368.css",
-    "static/js/main.7344f10a.js"
+    "static/js/main.4b7237f3.js"
   ]
 }
