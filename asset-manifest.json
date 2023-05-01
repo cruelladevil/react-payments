@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/react-payments/static/css/main.5a134368.css",
-    "main.js": "/react-payments/static/js/main.4b7237f3.js",
-    "static/media/question.svg": "/react-payments/static/media/question.7e7d319183b2409a13e4a2f1e5a1171d.svg",
+    "main.js": "/react-payments/static/js/main.a58aac55.js",
+    "static/media/woori.svg": "/react-payments/static/media/woori.69909908475bd0f435c293143b77d2bb.svg",
+    "static/media/kb.svg": "/react-payments/static/media/kb.950012387e0eb8a79eb5d181887f5bba.svg",
+    "static/media/bc.svg": "/react-payments/static/media/bc.1906f6c4fb3a2f75b71d0821023fcc21.svg",
+    "static/media/shinhan.svg": "/react-payments/static/media/shinhan.0e86c0dd58a7775f658648db26b63a6b.svg",
+    "static/media/hana.svg": "/react-payments/static/media/hana.d8f54a2fda5930967bba5f7e10b8109f.svg",
+    "static/media/lotte.svg": "/react-payments/static/media/lotte.9796ef58826d29eb2df769c3ed2f0a3f.svg",
+    "static/media/hyundai.svg": "/react-payments/static/media/hyundai.6fbeeec3bb37a1b428cc5bb121331d58.svg",
+    "static/media/kakao.svg": "/react-payments/static/media/kakao.7e24bf72b3b9ad9085af95f9890518da.svg",
     "index.html": "/react-payments/index.html",
-    "static/media/previous.svg": "/react-payments/static/media/previous.150dd18b2998e33b66064205bc4b5606.svg",
-    "static/media/white-dot.svg": "/react-payments/static/media/white-dot.a8abc29e4a2a7f833baccb72998fb08e.svg",
-    "main.5a134368.css.map": "/react-payments/static/css/main.5a134368.css.map",
-    "main.4b7237f3.js.map": "/react-payments/static/js/main.4b7237f3.js.map"
+    "static/media/chevron-left.svg": "/react-payments/static/media/chevron-left.c80cdd8edb8ab6c8a1634e6d14e15383.svg",
+    "main.a58aac55.js.map": "/react-payments/static/js/main.a58aac55.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a134368.css",
-    "static/js/main.4b7237f3.js"
+    "static/js/main.a58aac55.js"
   ]
 }
