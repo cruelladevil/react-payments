@@ -1,7 +1,7 @@
 import { Input, InputBox } from '../Input';
 import styled from 'styled-components';
 import { Label } from '../Label';
-import useAutoFocus from '../../hooks/useAutoFocus';
+import { useFocus } from '../../hooks/useFocus';
 import type { CardInformation } from '../../domain/types/card';
 
 type ExpirationDateInputProps = {
@@ -14,13 +14,14 @@ type ExpirationDateInputProps = {
 
 const ExpirationDateInput = ({ expirationDate, onChange }: ExpirationDateInputProps) => {
   const { onChangeMonth, onChangeYear } = onChange;
-  const { inputRefs, focusNext } = useAutoFocus(2);
+  const { registerFocusRef, focus } = useFocus();
 
   return (
     <>
       <Label htmlFor="expiration-date">만료일</Label>
       <Styled.Box marginTop="10px">
         <Input
+          {...registerFocusRef(0)}
           id="expiration-date"
           type="text"
           width="65px"
@@ -30,16 +31,14 @@ const ExpirationDateInput = ({ expirationDate, onChange }: ExpirationDateInputPr
           inputMode="numeric"
           onChange={(e) => {
             onChangeMonth(e);
-            focusNext(0);
+            focus(1);
           }}
           autoComplete="off"
-          ref={(node: HTMLInputElement) => {
-            inputRefs.current[0] = node;
-          }}
           value={expirationDate.month}
         />
         <Slash />
         <Input
+          {...registerFocusRef(1)}
           type="text"
           width="65px"
           maxLength={2}
@@ -48,9 +47,6 @@ const ExpirationDateInput = ({ expirationDate, onChange }: ExpirationDateInputPr
           inputMode="numeric"
           onChange={onChangeYear}
           autoComplete="off"
-          ref={(node: HTMLInputElement) => {
-            inputRefs.current[1] = node;
-          }}
           value={expirationDate.year}
         />
       </Styled.Box>

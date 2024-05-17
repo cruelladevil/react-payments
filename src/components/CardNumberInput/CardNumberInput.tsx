@@ -1,8 +1,8 @@
 import { Input, InputBox } from '../Input';
 import styled from 'styled-components';
 import { Label } from '../Label';
-import useAutoFocus from '../../hooks/useAutoFocus';
 import type { CardInformation } from '../../domain/types/card';
+import { useFocus } from '../../hooks/useFocus';
 
 type CardNumberInputProps = {
   cardNumber: CardInformation['cardNumber'];
@@ -11,13 +11,14 @@ type CardNumberInputProps = {
 
 const CardNumberInput = ({ cardNumber, onChange }: CardNumberInputProps) => {
   const [onFirstChange, onSecondChange, onThirdChange, onFourthChange] = onChange;
-  const { inputRefs, focusNext } = useAutoFocus(4);
+  const { registerFocusRef, focus } = useFocus();
 
   return (
     <>
       <Label htmlFor="CardNumber">카드 번호</Label>
       <Styled.Box marginTop="10px">
         <Input
+          {...registerFocusRef(0)}
           id="CardNumber"
           type="text"
           width="65px"
@@ -27,16 +28,14 @@ const CardNumberInput = ({ cardNumber, onChange }: CardNumberInputProps) => {
           inputMode="numeric"
           onChange={(e) => {
             onFirstChange(e);
-            focusNext(0);
+            focus(1);
           }}
           autoComplete="off"
-          ref={(node: HTMLInputElement) => {
-            inputRefs.current[0] = node;
-          }}
           value={cardNumber[0]}
         />
         <Dash />
         <Input
+          {...registerFocusRef(1)}
           type="text"
           width="65px"
           maxLength={4}
@@ -45,16 +44,14 @@ const CardNumberInput = ({ cardNumber, onChange }: CardNumberInputProps) => {
           inputMode="numeric"
           onChange={(e) => {
             onSecondChange(e);
-            focusNext(1);
+            focus(2);
           }}
           autoComplete="off"
-          ref={(node: HTMLInputElement) => {
-            inputRefs.current[1] = node;
-          }}
           value={cardNumber[1]}
         />
         <Dash />
         <Input
+          {...registerFocusRef(2)}
           type="password"
           width="65px"
           maxLength={4}
@@ -63,16 +60,14 @@ const CardNumberInput = ({ cardNumber, onChange }: CardNumberInputProps) => {
           inputMode="numeric"
           onChange={(e) => {
             onThirdChange(e);
-            focusNext(2);
+            focus(3);
           }}
           autoComplete="off"
-          ref={(node: HTMLInputElement) => {
-            inputRefs.current[2] = node;
-          }}
           value={cardNumber[2]}
         />
         <Dash />
         <Input
+          {...registerFocusRef(3)}
           type="password"
           width="65px"
           maxLength={4}
@@ -81,9 +76,6 @@ const CardNumberInput = ({ cardNumber, onChange }: CardNumberInputProps) => {
           inputMode="numeric"
           onChange={onFourthChange}
           autoComplete="off"
-          ref={(node: HTMLInputElement) => {
-            inputRefs.current[3] = node;
-          }}
           value={cardNumber[3]}
         />
       </Styled.Box>
