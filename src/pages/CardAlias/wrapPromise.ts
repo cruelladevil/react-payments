@@ -1,11 +1,15 @@
-const enum RESOURCE_STATUS {
-  PENDING = 'pending',
-  SUCCESS = 'success',
-  ERROR = 'error',
-}
+import { ValueOf } from '../../utils/types/ValueOf';
+
+const RESOURCE_STATUS = {
+  PENDING: 'pending',
+  SUCCESS: 'success',
+  ERROR: 'error',
+} as const;
+
+type ResourceStatus = ValueOf<typeof RESOURCE_STATUS>;
 
 export function wrapPromise<T>(promise: Promise<T>) {
-  let status = RESOURCE_STATUS.PENDING;
+  let status: ResourceStatus = RESOURCE_STATUS.PENDING;
   let result: T;
 
   const suspender = promise.then(

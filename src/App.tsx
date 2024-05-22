@@ -6,15 +6,18 @@ import { CardListProvider } from './contexts/CardListContexts';
 import CardAlias from './pages/CardAlias';
 import { PortalProvider } from './components/ModalPortal';
 import CardRegisterLoader from './pages/CardAlias/CardRegisterLoader';
+import { ValueOf } from './utils/types/ValueOf';
 
-const enum PAGE {
-  CARD_LIST = 'card-list',
-  CARD_REGISTRATION = 'card-registration',
-  CARD_ALIAS = 'card-alias',
-}
+const PAGE = {
+  CARD_LIST: 'card-list',
+  CARD_REGISTRATION: 'card-registration',
+  CARD_ALIAS: 'card-alias',
+} as const;
+
+type Page = ValueOf<typeof PAGE>;
 
 function App() {
-  const [page, setPage] = useState<PAGE>(PAGE.CARD_LIST);
+  const [page, setPage] = useState<Page>(PAGE.CARD_LIST);
   const [currentId, setCurrentId] = useState(0);
 
   return (
