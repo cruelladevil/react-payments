@@ -5,7 +5,7 @@ type HeaderProps = {
 };
 
 const Header = ({ title }: HeaderProps) => {
-  return <Styled.Wrapper>{title}</Styled.Wrapper>;
+  return <Wrapper>{title}</Wrapper>;
 };
 
 export default Header;
@@ -15,7 +15,3 @@ const Wrapper = styled.header`
   height: 20px;
   font-size: 16px;
 `;
-
-const Styled = {
-  Wrapper,
-};

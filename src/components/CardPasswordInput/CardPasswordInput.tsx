@@ -9,8 +9,8 @@ const CardPasswordInput = () => {
   return (
     <>
       <Label htmlFor="password">카드 비밀번호</Label>
-      <Styled.Wrapper marginTop="10px">
-        <Styled.Box>
+      <Wrapper marginTop="10px">
+        <Box>
           <Input
             {...registerFocusRef(0)}
             id="password"
@@ -22,8 +22,8 @@ const CardPasswordInput = () => {
             autoComplete="off"
             onChange={(e) => focus(1)}
           />
-        </Styled.Box>
-        <Styled.Box>
+        </Box>
+        <Box>
           <Input
             {...registerFocusRef(1)}
             type="password"
@@ -33,10 +33,10 @@ const CardPasswordInput = () => {
             inputMode="numeric"
             autoComplete="off"
           />
-        </Styled.Box>
+        </Box>
         <Input type="password" width="43px" maxLength={1} textAlign="center" value="0" disabled />
         <Input type="password" width="43px" maxLength={1} textAlign="center" value="0" disabled />
-      </Styled.Wrapper>
+      </Wrapper>
     </>
   );
 };
@@ -56,8 +56,3 @@ const Wrapper = styled.div<WrapperProps>`
 const Box = styled(InputBox)`
   width: 43px;
 `;
-
-const Styled = {
-  Wrapper,
-  Box,
-};

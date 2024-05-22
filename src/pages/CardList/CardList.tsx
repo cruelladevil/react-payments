@@ -13,19 +13,17 @@ const CardList = ({ setPageCardRegistration }: CardListProps) => {
 
   return (
     <Layout title="보유 카드">
-      <Styled.CardListWrapper>
-        {cardList.map((card) => {
-          return (
-            <Styled.CardItemWrapper key={card.id}>
-              <Card card={card} />
-              <Styled.CardAlias>{card.alias}</Styled.CardAlias>
-            </Styled.CardItemWrapper>
-          );
-        })}
-        <Styled.CardItemWrapper>
+      <CardListWrapper>
+        {cardList.map((card) => (
+          <CardItemWrapper key={card.id}>
+            <Card card={card} />
+            <CardAlias>{card.alias}</CardAlias>
+          </CardItemWrapper>
+        ))}
+        <CardItemWrapper>
           <CardAddButton onClick={setPageCardRegistration} />
-        </Styled.CardItemWrapper>
-      </Styled.CardListWrapper>
+        </CardItemWrapper>
+      </CardListWrapper>
     </Layout>
   );
 };
@@ -56,9 +54,3 @@ const CardItemWrapper = styled.li`
 const CardAlias = styled.div`
   margin-top: 10px;
 `;
-
-const Styled = {
-  CardListWrapper,
-  CardItemWrapper,
-  CardAlias,
-};

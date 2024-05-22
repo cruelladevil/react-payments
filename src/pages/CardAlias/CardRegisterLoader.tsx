@@ -2,12 +2,12 @@ import styled, { keyframes } from 'styled-components';
 
 const CardRegisterLoader = () => {
   return (
-    <Styled.Layout>
-      <Styled.Wrapper>
-        <Styled.Loader />
-      </Styled.Wrapper>
-      <Styled.Message>카드를 등록중입니다.</Styled.Message>
-    </Styled.Layout>
+    <Layout>
+      <Wrapper>
+        <Loader />
+      </Wrapper>
+      <Message>카드를 등록중입니다.</Message>
+    </Layout>
   );
 };
 
@@ -51,10 +51,3 @@ const Message = styled.div`
   font-size: 14px;
   font-weight: 700;
 `;
-
-const Styled = {
-  Layout,
-  Wrapper,
-  Loader,
-  Message,
-};

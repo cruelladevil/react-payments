@@ -16,7 +16,7 @@ const CardNumberInput = ({ cardNumber, onChange }: CardNumberInputProps) => {
   return (
     <>
       <Label htmlFor="CardNumber">카드 번호</Label>
-      <Styled.Box marginTop="10px">
+      <Box marginTop="10px">
         <Input
           {...registerFocusRef(0)}
           id="CardNumber"
@@ -78,7 +78,7 @@ const CardNumberInput = ({ cardNumber, onChange }: CardNumberInputProps) => {
           autoComplete="off"
           value={cardNumber[3]}
         />
-      </Styled.Box>
+      </Box>
     </>
   );
 };
@@ -92,10 +92,6 @@ const DashWrapper = styled.div`
   color: #737373;
   text-align: center;
 `;
-
-const Styled = {
-  Box,
-};
 
 export const Dash = () => {
   return <DashWrapper>-</DashWrapper>;

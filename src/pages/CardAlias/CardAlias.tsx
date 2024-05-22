@@ -51,19 +51,19 @@ const CardAlias = ({ setPageCardList, currentId }: CardAliasProps) => {
   };
 
   return (
-    <Styled.Wrapper>
+    <Wrapper>
       <Header title="카드 이름을 지어주세요." />
-      <Styled.CardWrapper>
+      <CardWrapper>
         <Card card={card} />
-      </Styled.CardWrapper>
-      <Styled.InputWrapper>
-        <Styled.AliasInput width="240px" type="text" textAlign="center" maxLength={10} ref={aliasRef} />
-      </Styled.InputWrapper>
-      <Styled.ConfirmButton type="button" onClick={handleClickButton}>
+      </CardWrapper>
+      <InputWrapper>
+        <AliasInput width="240px" type="text" textAlign="center" maxLength={10} ref={aliasRef} />
+      </InputWrapper>
+      <ConfirmButton type="button" onClick={handleClickButton}>
         확인
-      </Styled.ConfirmButton>
+      </ConfirmButton>
       <PostResult resource={postResource} />
-    </Styled.Wrapper>
+    </Wrapper>
   );
 };
 
@@ -93,11 +93,3 @@ const AliasInput = styled(Input)``;
 const ConfirmButton = styled.button`
   margin-top: 30px;
 `;
-
-const Styled = {
-  Wrapper,
-  CardWrapper,
-  InputWrapper,
-  AliasInput,
-  ConfirmButton,
-};

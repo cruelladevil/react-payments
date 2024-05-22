@@ -8,7 +8,7 @@ type BottomSheetProps = {
 const BottomSheet = ({ closeModal, children }: React.PropsWithChildren<BottomSheetProps>) => {
   return (
     <ModalPortal closeModal={closeModal}>
-      <Styled.Contents>{children}</Styled.Contents>
+      <Contents>{children}</Contents>
     </ModalPortal>
   );
 };
@@ -33,7 +33,3 @@ const Contents = styled.div`
     }
   }
 `;
-
-const Styled = {
-  Contents,
-};

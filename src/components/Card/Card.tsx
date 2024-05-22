@@ -12,22 +12,22 @@ const Card = ({ card, onClick }: CardProps) => {
   const { month, year } = expirationDate;
 
   return (
-    <Styled.CardTemplate bgColor={MAIN_COLOR[cardType]} onClick={onClick}>
-      <Styled.CardName>{cardType}</Styled.CardName>
-      <Styled.CardIC />
-      <Styled.CardInfoWrapper>
-        <Styled.CardInput value={cardNumber[0]} type="text" maxLength={4} disabled />
-        <Styled.CardInput value={cardNumber[1]} type="text" maxLength={4} disabled />
-        <Styled.CardInput value={cardNumber[2]} type="password" maxLength={4} disabled />
-        <Styled.CardInput value={cardNumber[3]} type="password" maxLength={4} disabled />
-      </Styled.CardInfoWrapper>
-      <Styled.CardInfoWrapper>
-        <Styled.CardOwner>{owner.slice(0, 20)}</Styled.CardOwner>
-        <Styled.CardOwner>
+    <CardTemplate bgColor={MAIN_COLOR[cardType]} onClick={onClick}>
+      <CardName>{cardType}</CardName>
+      <CardIC />
+      <CardInfoWrapper>
+        <CardInput value={cardNumber[0]} type="text" maxLength={4} disabled />
+        <CardInput value={cardNumber[1]} type="text" maxLength={4} disabled />
+        <CardInput value={cardNumber[2]} type="password" maxLength={4} disabled />
+        <CardInput value={cardNumber[3]} type="password" maxLength={4} disabled />
+      </CardInfoWrapper>
+      <CardInfoWrapper>
+        <CardOwner>{owner.slice(0, 20)}</CardOwner>
+        <CardOwner>
           {month}/{year}
-        </Styled.CardOwner>
-      </Styled.CardInfoWrapper>
-    </Styled.CardTemplate>
+        </CardOwner>
+      </CardInfoWrapper>
+    </CardTemplate>
   );
 };
 
@@ -83,12 +83,3 @@ const CardInfoWrapper = styled.div`
 `;
 
 const CardOwner = styled.div``;
-
-const Styled = {
-  CardTemplate,
-  CardIC,
-  CardName,
-  CardInput,
-  CardInfoWrapper,
-  CardOwner,
-};

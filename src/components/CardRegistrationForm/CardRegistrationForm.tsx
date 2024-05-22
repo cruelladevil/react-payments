@@ -153,10 +153,10 @@ const CardRegistrationForm = ({ setPageCardAlias, setCurrentId, openModal }: Car
   };
 
   return (
-    <Styled.FormWrapper onSubmit={onSubmitCard}>
-      <Styled.CardWrapper>
+    <FormWrapper onSubmit={onSubmitCard}>
+      <CardWrapper>
         <Card card={card} onClick={openModal} />
-      </Styled.CardWrapper>
+      </CardWrapper>
 
       <InputGroup>
         <CardNumberInput cardNumber={card.cardNumber} onChange={onChangeCardNumber} />
@@ -183,7 +183,7 @@ const CardRegistrationForm = ({ setPageCardAlias, setCurrentId, openModal }: Car
         <ErrorMessage>{cardError.cardPassword?.message}</ErrorMessage>
       </InputGroup>
       <SubmitButton disabled={false}>다음</SubmitButton>
-    </Styled.FormWrapper>
+    </FormWrapper>
   );
 };
 
@@ -224,10 +224,3 @@ const ErrorMessage = styled.div`
   font-size: 10px;
   color: red;
 `;
-
-const Styled = {
-  FormWrapper,
-  CardWrapper,
-  SubmitButton,
-  ErrorMessage,
-};

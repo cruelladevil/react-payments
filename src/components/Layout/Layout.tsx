@@ -8,13 +8,13 @@ type LayoutProps = {
 
 const Layout = ({ children, title, leftButton }: React.PropsWithChildren<LayoutProps>) => {
   return (
-    <Styled.Wrapper>
+    <Wrapper>
       <HeaderWrapper>
         {leftButton}
         <Header title={title} />
       </HeaderWrapper>
       {children}
-    </Styled.Wrapper>
+    </Wrapper>
   );
 };
 
@@ -32,8 +32,3 @@ const HeaderWrapper = styled.div`
   display: flex;
   gap: 10px;
 `;
-
-const Styled = {
-  Wrapper,
-  HeaderWrapper,
-};

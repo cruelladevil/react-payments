@@ -7,8 +7,8 @@ const SecurityCodeInput = () => {
   return (
     <>
       <Label htmlFor="security-code">보안 코드(CVC/CVV)</Label>
-      <Styled.Flex>
-        <Styled.Wrapper>
+      <Flex>
+        <Wrapper>
           <Input
             id="security-code"
             type="password"
@@ -18,11 +18,11 @@ const SecurityCodeInput = () => {
             inputMode="numeric"
             autoComplete="off"
           />
-        </Styled.Wrapper>
+        </Wrapper>
         <ToolTip message="카드 뒷면의 번호 3자리를 입력해주세요.">
-          <Styled.QuestionToolTip>?</Styled.QuestionToolTip>
+          <QuestionToolTip>?</QuestionToolTip>
         </ToolTip>
-      </Styled.Flex>
+      </Flex>
     </>
   );
 };
@@ -55,9 +55,3 @@ const QuestionToolTip = styled.div`
   border-radius: 50%;
   color: rgba(0, 0, 0, 0.6);
 `;
-
-const Styled = {
-  Wrapper,
-  Flex,
-  QuestionToolTip,
-};

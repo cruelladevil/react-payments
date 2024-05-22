@@ -19,7 +19,7 @@ const ExpirationDateInput = ({ expirationDate, onChange }: ExpirationDateInputPr
   return (
     <>
       <Label htmlFor="expiration-date">만료일</Label>
-      <Styled.Box marginTop="10px">
+      <Box marginTop="10px">
         <Input
           {...registerFocusRef(0)}
           id="expiration-date"
@@ -49,7 +49,7 @@ const ExpirationDateInput = ({ expirationDate, onChange }: ExpirationDateInputPr
           autoComplete="off"
           value={expirationDate.year}
         />
-      </Styled.Box>
+      </Box>
     </>
   );
 };
@@ -66,11 +66,6 @@ const SlashWrapper = styled.div`
   font-size: 18px;
   text-align: center;
 `;
-
-const Styled = {
-  Box,
-  SlashWrapper,
-};
 
 const Slash = () => {
   return <SlashWrapper>/</SlashWrapper>;

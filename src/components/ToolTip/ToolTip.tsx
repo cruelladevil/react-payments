@@ -17,7 +17,7 @@ const ToolTip = ({ children, message }: React.PropsWithChildren<ToolTipProps>) =
       <ToolTipBox onMouseOver={openToolTip} onMouseLeave={closeToolTip}>
         {children}
       </ToolTipBox>
-      {isToolTipOpen && <Styled.ToolTipMessage>{message}</Styled.ToolTipMessage>}
+      {isToolTipOpen && <ToolTipMessage>{message}</ToolTipMessage>}
     </>
   );
 };
@@ -35,8 +35,3 @@ const ToolTipMessage = styled.div`
   color: rgba(0, 0, 0, 0.6);
   font-size: 12px;
 `;
-
-const Styled = {
-  ToolTipBox,
-  ToolTipMessage,
-};

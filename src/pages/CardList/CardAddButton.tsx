@@ -6,9 +6,9 @@ type CardAddButtonProps = {
 
 const CardAddButton = ({ onClick }: CardAddButtonProps) => {
   return (
-    <Styled.Button type="button" bgColor="#E5E5E5" onClick={onClick}>
-      <Styled.PlusWrapper>+</Styled.PlusWrapper>
-    </Styled.Button>
+    <Button type="button" bgColor="#E5E5E5" onClick={onClick}>
+      <PlusWrapper>+</PlusWrapper>
+    </Button>
   );
 };
 
@@ -50,8 +50,3 @@ const PlusWrapper = styled.div`
   font-size: 30px;
   color: #575757;
 `;
-
-const Styled = {
-  Button,
-  PlusWrapper,
-};

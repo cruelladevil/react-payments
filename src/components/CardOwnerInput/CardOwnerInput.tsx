@@ -11,11 +11,11 @@ type CardOwnerInputProps = {
 const CardOwnerInput = ({ owner, onChange, onBlur }: CardOwnerInputProps) => {
   return (
     <>
-      <Styled.LabelWrapper>
+      <LabelWrapper>
         <Label htmlFor="owner">카드 소유자 이름 (선택)</Label>
         <Label>{owner.length}/30</Label>
-      </Styled.LabelWrapper>
-      <Styled.Box marginTop="10px">
+      </LabelWrapper>
+      <Box marginTop="10px">
         <Input
           id="owner"
           type="text"
@@ -28,7 +28,7 @@ const CardOwnerInput = ({ owner, onChange, onBlur }: CardOwnerInputProps) => {
           autoComplete="off"
           value={owner}
         />
-      </Styled.Box>
+      </Box>
     </>
   );
 };
@@ -41,8 +41,3 @@ const LabelWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
-const Styled = {
-  Box,
-  LabelWrapper,
-};

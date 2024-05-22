@@ -24,10 +24,10 @@ const ModalPortal = ({ children, closeModal }: PropsWithChildren<ModalPortalProp
 
   if (ref.current && mounted) {
     return createPortal(
-      <Styled.Wrapper>
-        <Styled.Backdrop onClick={closeModal} />
+      <Wrapper>
+        <Backdrop onClick={closeModal} />
         {children}
-      </Styled.Wrapper>,
+      </Wrapper>,
       ref.current,
     );
   }
@@ -66,8 +66,3 @@ const Backdrop = styled.div`
     }
   }
 `;
-
-const Styled = {
-  Wrapper,
-  Backdrop,
-};

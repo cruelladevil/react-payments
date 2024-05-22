@@ -7,10 +7,10 @@ type BankProfileButtonProps = {
 
 const BankProfileButton = ({ children, name, onClick }: React.PropsWithChildren<BankProfileButtonProps>) => {
   return (
-    <Styled.Wrapper onClick={onClick}>
+    <Wrapper onClick={onClick}>
       {children}
-      <Styled.BankName>{name}</Styled.BankName>
-    </Styled.Wrapper>
+      <BankName>{name}</BankName>
+    </Wrapper>
   );
 };
 
@@ -25,8 +25,3 @@ const BankName = styled.div`
   margin-top: 10px;
   font-size: 12px;
 `;
-
-const Styled = {
-  Wrapper,
-  BankName,
-};

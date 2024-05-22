@@ -11,23 +11,21 @@ const BankProfileList = ({ closeModal }: BankProfileListProps) => {
   const { setCard } = useCardContext();
 
   return (
-    <Styled.ProfileList>
-      {BANK_LIST.map(({ name, profile }) => {
-        return (
-          <Styled.ProfileItem key={name}>
-            <BankProfileButton
-              name={name}
-              onClick={() => {
-                setCard((prev) => ({ ...prev, cardType: name }));
-                closeModal();
-              }}
-            >
-              {profile}
-            </BankProfileButton>
-          </Styled.ProfileItem>
-        );
-      })}
-    </Styled.ProfileList>
+    <ProfileList>
+      {BANK_LIST.map(({ name, profile }) => (
+        <ProfileItem key={name}>
+          <BankProfileButton
+            name={name}
+            onClick={() => {
+              setCard((prev) => ({ ...prev, cardType: name }));
+              closeModal();
+            }}
+          >
+            {profile}
+          </BankProfileButton>
+        </ProfileItem>
+      ))}
+    </ProfileList>
   );
 };
 
@@ -44,8 +42,3 @@ const ProfileItem = styled.li`
   display: flex;
   justify-content: center;
 `;
-
-const Styled = {
-  ProfileList,
-  ProfileItem,
-};
